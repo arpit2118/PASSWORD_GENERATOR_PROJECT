@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="main.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="flex justify-center items-center bg-gradient-to-r from-darkBlue via-blue to-lightBlue text-white">
+      <!-- box -->
+      <div class="flex flex-col w-[300px] h-[400px] mt-24 gap-6">
+          <h1 class="mx-auto font-bold text-2xl ">
+            PASSWORD GENERATOR
+          </h1>
+
+          <div class="flex justify-between px-3  bg-darkBlue rounded-md items-center" id="passbox" >
+            <input readonly placeholder="PASSWORD" class="text-white p-2 bg-darkBlue rounded-md border-none focus:outline-none focus:border-none  placeholder-white" data-passwordDisplay>
+              <div data-copy class="flex flex-col justify-center items-center">
+                <span data-copyMsg></span>
+                <i class="fa-regular fa-copy"></i>
+              </div>
+          </div>
+
+          <div class="flex flex-col gap-6 px-5 py-4 bg-darkBlue rounded-md">
+            <div class="flex justify-between">
+              <p class="text-white">Password Length</p>
+              <p data-lengthNumber>0</p>
+            </div>
+
+            <div class="w-full">
+              <input type="range" id="slider" class="w-full" min="1" max="20" step="1">
+            </div>
+
+            <ul class="flex flex-col">
+                <li class="flex gap-2"><input type="checkbox" id="Uppercase">Include Uppercase letters</li>
+                <li class="flex gap-2"><input type="checkbox" id="lowercase">Include Lowercase letters</li>
+                <li class="flex gap-2"><input type="checkbox" id="numbers">Include Numbers</li>
+                <li class="flex gap-2"><input type="checkbox" id="symbol">Include Symbols</li>
+            </ul>
+
+            <div>
+              <p>Strength</p>
+              <div id="indicator"></div>
+            </div>
+
+            <button id="generator" class=" hover:bg-sky-500 shadow-lg transition-all border rounded-md border-e-sky-200 py-1 font-bold text-1xl">Generate Password</button>
+          </div>
+      </div>
+      <script src="script.js"></script>
+  </body>
+  </html>
